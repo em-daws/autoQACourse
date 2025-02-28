@@ -1,9 +1,6 @@
 package homework.lection8;
 
 import java.util.Arrays;
-import java.util.OptionalDouble;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 public class Task8_2 {
 
