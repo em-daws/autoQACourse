@@ -10,6 +10,7 @@ public class Task8_9 {
         System.out.println(endsWith2("AbC", "HiaBc"));
         System.out.println(endsWith2("abc", "abXabc"));
         System.out.println(endsWith2("Hiabc", "abc"));
+        System.out.println(endsWith2("AbC", "abc"));
 
     }
 
@@ -32,10 +33,8 @@ public class Task8_9 {
 
         if (string1Length > string2Length) {
             return string1.substring(string1Length - string2Length).equalsIgnoreCase(string2);
-        } else if (string1Length < string2Length) {
-            return string2.substring(string2Length - string1Length).equalsIgnoreCase(string1);
         } else {
-            return string1.equalsIgnoreCase(string2);
+            return string2.substring(string2Length - string1Length).equalsIgnoreCase(string1);
         }
     }
 }
