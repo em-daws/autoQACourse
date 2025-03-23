@@ -1,6 +1,6 @@
 package homework.lection9;
 
-public class Person {
+public class Person implements Displayable {
 
     //Створіть Java програму з використанням класів та конструкторів, яка виконує наступні завдання:
 
@@ -16,9 +16,9 @@ public class Person {
 
     private String name;
     private int age;
-    private String profession;
+    private PersonRole profession;
 
-    public Person(String name, int age, String profession) {
+    public Person(String name, int age, PersonRole profession) {
         this.name = name;
         this.age = age;
         this.profession = profession;
@@ -40,11 +40,26 @@ public class Person {
         this.age = age;
     }
 
-    public String getProfession() {
+    public PersonRole getProfession() {
         return profession;
     }
 
-    public void setProfession(String profession) {
+    public void setProfession(PersonRole profession) {
         this.profession = profession;
     }
+
+    @Override
+    public void displayInformation() {
+        StringBuilder stringBuilder = new StringBuilder();
+
+        stringBuilder.append("Ім'я: ")
+                .append(this.name)
+                .append(", Вік: ")
+                .append(this.age)
+                .append(", Професія: ")
+                .append(this.profession.getRoleName());
+
+        System.out.println(stringBuilder);
+    }
 }
+
