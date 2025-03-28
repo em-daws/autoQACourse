@@ -10,16 +10,20 @@ public class CreatingPersons {
         UpdatedWoman person5 = new UpdatedWoman("Mary", 25, PersonRole.TEACHER);
         UpdatedMan person6 = new UpdatedMan("Bob", 35, PersonRole.DOCTOR);
 
-        person4.displayInformation("Hi! Nice to meet you!");
-        person5.displayInformation("What's up?");
-        person6.displayInformation("Nice to see you!");
+        person4.displayInformation();
+        person5.displayInformation();
+        person6.displayInformation();
 
         person6.setProfession(PersonRole.ARCHITECT);
         System.out.println("Після зміни профісії Боба:");
         person6.displayInformation();
+        System.out.println("-------------------------------------");
 
-        //using of abstract method:
-        person6.sayToConsole();
+        //using of abstract method and overloaded method:
+        UpdatedMan person7 = new UpdatedMan("Bobby", 29, PersonRole.ARTIST);
+        person7.displayInformation("Hi all!");
+        System.out.println("--------------------------------------");
+        person7.sayToConsole();
     }
 
     public static void methodWhichPrintsTheInfo(AbstractPerson person) {
