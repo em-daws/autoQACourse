@@ -1,7 +1,4 @@
 package homework.lection12;
-
-import com.sun.source.doctree.InlineTagTree;
-
 import java.util.*;
 
 public class Task1 {
