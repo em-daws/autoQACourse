@@ -21,7 +21,7 @@ public class Task1 {
 
         //Створіть сет, та переконайтеся, що він може зберігати лише унікальні елементи.
         Set<Integer> uniqueNumbers = new HashSet<>(numbers);
-        Set<Integer> uniqueNumbersCopy = uniqueNumbers;
+        Set<Integer> uniqueNumbersCopy = new HashSet<>(uniqueNumbers);
 
         uniqueNumbers.add(3);
 
