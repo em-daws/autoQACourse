@@ -1,4 +1,4 @@
-package homework.lection11;
+package homework.lection11and14;
 
 public abstract class AbstractPerson implements Displayable {
 
@@ -6,7 +6,15 @@ public abstract class AbstractPerson implements Displayable {
     private int age;
     private PersonRole profession;
 
-    public AbstractPerson(String name, int age, PersonRole profession) {
+    public AbstractPerson(String name, int age, PersonRole profession) throws InvalidDataException {
+        if (name == null || name.trim().isEmpty()) {
+            throw new InvalidDataException("Name is empty");
+        }
+
+        if (age < 0) {
+            throw new IllegalArgumentException("Age is negative");
+        }
+
         this.name = name;
         this.age = age;
         this.profession = profession;
@@ -17,7 +25,9 @@ public abstract class AbstractPerson implements Displayable {
      */
     public abstract void sayToConsole();
 
-    public String getName() { return name; }
+    public String getName() {
+        return name;
+    }
 
     public void setName(String name) {
         this.name = name;
@@ -58,7 +68,6 @@ public abstract class AbstractPerson implements Displayable {
      */
     @Override
     public void displayInformation(String greetings) {
-
         String stringBuilder = "Ім'я: " +
                 this.name +
                 ", Вік: " +

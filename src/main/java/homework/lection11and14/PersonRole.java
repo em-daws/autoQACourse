@@ -1,4 +1,4 @@
-package homework.lection11;
+package homework.lection11and14;
 
 public enum PersonRole {
     STUDENT("Student"),

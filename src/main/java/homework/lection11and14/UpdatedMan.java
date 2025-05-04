@@ -1,10 +1,10 @@
-package homework.lection11;
+package homework.lection11and14;
 
-public class UpdatedWoman extends AbstractPerson {
+public class UpdatedMan extends AbstractPerson {
 
-    static final String XX = "Жінка";
+    static final String XY = "Чоловік";
 
-    public UpdatedWoman(String name, int age, PersonRole profession) {
+    public UpdatedMan(String name, int age, PersonRole profession) throws InvalidDataException {
         super(name, age, profession);
     }
 
@@ -19,7 +19,7 @@ public class UpdatedWoman extends AbstractPerson {
                 .append(", Професія: ")
                 .append(super.getProfession().getRoleName())
                 .append(", Стать: ")
-                .append(XX);
+                .append(XY);
 
         System.out.println(stringBuilder);
     }
@@ -29,6 +29,6 @@ public class UpdatedWoman extends AbstractPerson {
      */
     @Override
     public void sayToConsole() {
-        System.out.println("Hi there! My name is " + getName() + ", I am a woman.");
+        System.out.println("Hi there! My name is " + getName() + ", I am a man.");
     }
 }
